@@ -46,7 +46,14 @@ func main() {
 		}
 	}
 
+	invitedTotal := len(invitedPeople)
+	var conversionRate = float64(counter) / float64(invitedTotal)
+
+	fmt.Println()
+	fmt.Println(invitedTotal, " Invited total")
 	fmt.Println(counter, " invited persons become connections")
+	fmt.Printf("Conversion rate: %03.2f%%", conversionRate)
+	fmt.Println()
 }
 
 func (c linkedinConnection) getFullName() string {
